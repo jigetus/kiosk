@@ -4,7 +4,8 @@
   "description": "web application for kiosk",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "test": "editorconfig-checker"
   },
   "author": "Alexey Danilov",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.8.0",
     "browser-sync": "^2.26.7",
+    "editorconfig-checker": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
@@ -24,5 +26,4 @@
     "postcss-import": "^12.0.1",
     "postcss-media-minmax": "^4.0.0"
   }
-
 }
