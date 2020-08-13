@@ -5,6 +5,7 @@ const replace = require('gulp-replace');
 const htmlmin = require('gulp-htmlmin');
 const terser = require('gulp-terser');
 const sync = require('browser-sync');
+const rigger = require('gulp-rigger');
 
 // HTML
 
@@ -44,6 +45,7 @@ const scripts = () => {
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
+        .pipe(rigger())
         .pipe(terser())
         .pipe(gulp.dest('dist'))
         .pipe(sync.stream());
@@ -57,6 +59,8 @@ const copy = () => {
     return gulp.src([
             'src/fonts/**/*',
             'src/images/**/*',
+            'src/configs/**/*',
+            'src/data/**/*'
         ], {
             base: 'src'
         })
@@ -106,6 +110,8 @@ const watch = () => {
     gulp.watch([
         'src/fonts/**/*',
         'src/images/**/*',
+        'src/configs/**/*',
+        'src/data/**/*',
     ], gulp.series(copy));
 };
 
