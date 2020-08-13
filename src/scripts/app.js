@@ -21,11 +21,15 @@ SmartClick("#goto_cons", () => router.GoTo("cons"));
 
 // Расписание таб
 function Rasp_tab(id) {
-	$(".class_tab").removeClass("class_tab_active");
-	$("#" + id).addClass("class_tab_active");
-	$(".rasp_img").css("display", "none");
-	$("#rasp_img_" + id).css("display", "block");
-	animateCSS("rasp_img_" + id, "fadeIn", () => {});
+	if(!$("#" + id).hasClass("class_tab_active")){
+		console.log('click');
+		$(".class_tab").removeClass("class_tab_active");
+		$("#" + id).addClass("class_tab_active");
+		$(".rasp_img").css("display", "none");
+		$("#rasp_img_" + id).css("display", "block");
+		animateCSS("rasp_img_" + id, "fadeIn", () => {});
+	}
+
 }
 
 function AddKruzhok(id, name, img, author, desc, age, time, price) {
@@ -96,14 +100,6 @@ $(document).ready(function () {
 		});
 });
 
-// //Возврат в начало если нет активности
-// document.body.addEventListener("click",(event)=>{
-//     console.log('добавил слушатель');
-//     clearTimeout(timeout);
-//     var timeout = setTimeout(()=>{
-//         router.GoToMenu();
-//     },5000);
-// });
 
 var no_active_delay = 10; // Количество секунд простоя мыши, при котором пользователь считается неактивным
 var now_no_active = 0; // Текущее количество секунд простоя мыши
