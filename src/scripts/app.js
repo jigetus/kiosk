@@ -72,4 +72,27 @@ $(document).ready(function() {
 
 
 
+// //Возврат в начало если нет активности
+// document.body.addEventListener("click",(event)=>{
+//     console.log('добавил слушатель');
+//     clearTimeout(timeout);
+//     var timeout = setTimeout(()=>{
+//         router.GoToMenu();
+//     },5000);
+// });
 
+var no_active_delay = 10; // Количество секунд простоя мыши, при котором пользователь считается неактивным
+var now_no_active = 0; // Текущее количество секунд простоя мыши
+setInterval("now_no_active++;", 1000); // Каждую секунду увеличиваем количество секунд простоя мыши
+setInterval("updateChat()", 1000); // Запускаем функцию updateChat() через определённый интервал
+document.body.onclick = activeUser; // Ставим обработчик на клик мыши
+function activeUser() {
+    now_no_active = 0; // Обнуляем счётчик простоя секунд
+}
+function updateChat() {
+  if (now_no_active >= no_active_delay) { // Проверяем не превышен ли "предел активности" пользователя
+    router.GoToMenu();
+    now_no_active = 0;
+    return;
+  }
+}

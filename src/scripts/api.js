@@ -80,6 +80,21 @@ class Router {
             });
         }
     }
+    GoToMenu(){
+        if(this.currentState!=='menu') {
+            animateCSS(this.currentState, "bounceOutRight", () => {
+                this.HideTab(this.currentState);
+                this.ShowTab("menu");
+                this.ShowBackground();
+                animateCSS("menu", "bounceInLeft", () => {
+                    this.currentState = "menu";
+                    this.prevState = null;
+                    this.path = "/menu"
+                });
+            });
+
+        }
+    }
 
 }
 
@@ -91,6 +106,7 @@ function SmartClick(targetSelector, action) {
         $(targetSelector).prop("disabled", true);
         setTimeout(() => {
             $(targetSelector).prop("disabled", false);
-        }, 1000);
+        }, 1500);
     })
 }
+
