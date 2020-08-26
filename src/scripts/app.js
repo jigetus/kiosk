@@ -21,15 +21,14 @@ SmartClick("#goto_cons", () => router.GoTo("cons"));
 
 // Расписание таб
 function Rasp_tab(id) {
-	if(!$("#" + id).hasClass("class_tab_active")){
-		console.log('click');
+	if (!$("#" + id).hasClass("class_tab_active")) {
+		console.log("click");
 		$(".class_tab").removeClass("class_tab_active");
 		$("#" + id).addClass("class_tab_active");
 		$(".rasp_img").css("display", "none");
 		$("#rasp_img_" + id).css("display", "block");
 		animateCSS("rasp_img_" + id, "fadeIn", () => {});
 	}
-
 }
 
 function AddKruzhok(id, name, img, author, desc, age, time, price) {
@@ -100,8 +99,7 @@ $(document).ready(function () {
 		});
 });
 
-
-var no_active_delay = 300; // Количество секунд простоя мыши, при котором пользователь считается неактивным
+var no_active_delay = 299; // Количество секунд простоя мыши, при котором пользователь считается неактивным
 var now_no_active = 0; // Текущее количество секунд простоя мыши
 setInterval("now_no_active++;", 1000); // Каждую секунду увеличиваем количество секунд простоя мыши
 setInterval("updateChat()", 1000); // Запускаем функцию updateChat() через определённый интервал
