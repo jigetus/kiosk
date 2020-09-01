@@ -10,14 +10,16 @@ const router = new Router("particles-js");
 router.HideTab("rasp");
 router.HideTab("kruzhki");
 router.HideTab("events");
-router.HideTab("play");
+// router.HideTab("play");
 router.HideTab("cons");
+router.HideTab("zvonki");
 
 SmartClick("#goto_rasp", () => router.GoTo("rasp"));
 SmartClick("#goto_kruzhki", () => router.GoTo("kruzhki"));
 SmartClick("#goto_events", () => router.GoTo("events"));
 SmartClick("#goto_play", () => router.GoTo("play"));
 SmartClick("#goto_cons", () => router.GoTo("cons"));
+SmartClick("#goto_zvonki", () => router.GoTo("zvonki"));
 
 // Расписание таб
 function Rasp_tab(id) {
@@ -99,6 +101,8 @@ $(document).ready(function () {
 		});
 });
 
+// добавление возврата на главную страницу через 5 мин простоя
+
 var no_active_delay = 299; // Количество секунд простоя мыши, при котором пользователь считается неактивным
 var now_no_active = 0; // Текущее количество секунд простоя мыши
 setInterval("now_no_active++;", 1000); // Каждую секунду увеличиваем количество секунд простоя мыши
@@ -115,3 +119,5 @@ function updateChat() {
 		return;
 	}
 }
+
+new SimpleBar(document.getElementById("zvonki_container"), { autoHide: false });

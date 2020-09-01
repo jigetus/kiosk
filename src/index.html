@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-        <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
     <title>Территория Гаммы 1502</title>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" media="screen" href="index.css" />
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- particles.js container -->
     <div id="particles-js" class="noselect faster"></div>
 
     <div class="tabs noselect faster" id="menu">
-        <img src="images/logo.svg" class="noselect logo" />
-        <button class="button" id="goto_rasp">Расписание</button>
-        <button class="button" id="goto_cons">Консультации</button>
-        <button class="button" id="goto_kruzhki">Кружки</button>
-        <button class="button" id="goto_events">Мероприятия</button>
-        <button class="button" id="goto_play">Поиграть</button>
+      <img src="images/logo.svg" class="noselect logo" />
+      <button class="button" id="goto_rasp">Расписание</button>
+      <button class="button" id="goto_zvonki">Режим работы</button>
+      <button class="button" id="goto_cons">Консультации</button>
+      <button class="button" id="goto_kruzhki">Кружки</button>
+      <button class="button" id="goto_events">Мероприятия</button>
+      <!-- <button class="button" id="goto_play">Поиграть</button> -->
     </div>
 
     <div class="tabs noselect faster" id="rasp">
-        <div class="tab_title">
-            <button class="back_action">
-                <img src="/images/close.svg" alt="" class="back_btn noselect" />
-            </button>
-            <div>Расписание</div>
-        </div>
-        <div class="class_containter">
-            <div class="class_tab" id="7l" onclick="Rasp_tab('7l')">
-                7-Л
-            </div>
-            <div class="class_tab" id="7n" onclick="Rasp_tab('7n')">7-Н</div>
-            <div class="class_tab" id="8v" onclick="Rasp_tab('8v')">8-В</div>
-            <div class="class_tab" id="8z" onclick="Rasp_tab('8z')">8-З</div>
-            <div class="class_tab" id="8n" onclick="Rasp_tab('8n')">8-Н</div>
-            <div class="class_tab" id="9v" onclick="Rasp_tab('9v')">9-В</div>
-            <div class="class_tab" id="9l" onclick="Rasp_tab('9l')">9-Л</div>
-            <div class="class_tab" id="9m" onclick="Rasp_tab('9m')">9-М</div>
-            <div class="class_tab" id="10l" onclick="Rasp_tab('10l')">10-Л</div>
-            <div class="class_tab" id="10m" onclick="Rasp_tab('10m')">10-М</div>
-            <div class="class_tab" id="10n" onclick="Rasp_tab('10n')">10-Н</div>
-            <div class="class_tab" id="11l" onclick="Rasp_tab('11l')">11-Л</div>
-            <div class="class_tab" id="11m" onclick="Rasp_tab('11m')">11-М</div>
-            <div class="class_tab" id="11n" onclick="Rasp_tab('11n')">11-Н</div>
-        </div>
-
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Расписание</div>
+      </div>
+      <div class="class_containter">
+        <div class="class_tab" id="7l" onclick="Rasp_tab('7l')">7-Л</div>
+        <div class="class_tab" id="7m" onclick="Rasp_tab('7m')">7-М</div>
+        <div class="class_tab" id="7n" onclick="Rasp_tab('7n')">7-Н</div>
+        <div class="class_tab" id="8l" onclick="Rasp_tab('8l')">8-Л</div>
+        <div class="class_tab" id="8m" onclick="Rasp_tab('8m')">8-М</div>
+        <div class="class_tab" id="8n" onclick="Rasp_tab('8n')">8-Н</div>
+        <div class="class_tab" id="9l" onclick="Rasp_tab('9l')">9-Л</div>
+        <div class="class_tab" id="9m" onclick="Rasp_tab('9m')">9-М</div>
+        <div class="class_tab" id="9v" onclick="Rasp_tab('9v')">9-В</div>
+        <div class="class_tab" id="10l" onclick="Rasp_tab('10l')">10-Л</div>
+        <div class="class_tab" id="10m" onclick="Rasp_tab('10m')">10-М</div>
+        <div class="class_tab" id="10n" onclick="Rasp_tab('10n')">10-Н</div>
+        <div class="class_tab" id="10ya" onclick="Rasp_tab('10ya')">10-Я</div>
+        <div class="class_tab" id="11l" onclick="Rasp_tab('11l')">11-Л</div>
+        <div class="class_tab" id="11m" onclick="Rasp_tab('11m')">11-М</div>
+        <div class="class_tab" id="11n" onclick="Rasp_tab('11n')">11-Н</div>
+      </div>
     </div>
 
     <div class="tabs noselect faster" id="cons">
-        <div class="tab_title">
-            <button class="back_action">
-                <img src="/images/close.svg" alt="" class="back_btn noselect" />
-            </button>
-            <div>Консультации</div>
-        </div>
-        <div class="class_containter" id="cons_container">
-            <div class="cons_tab_containter">
-
-            </div>
-
-        </div>
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Консультации</div>
+      </div>
+      <div class="class_containter" id="cons_container">
+        <div class="cons_tab_containter"></div>
+      </div>
     </div>
 
     <div class="tabs noselect faster" id="events">
-        <div class="tab_title">
-            <button class="back_action">
-                <img src="/images/close.svg" alt="" class="back_btn noselect" />
-            </button>
-            <div>Мероприятия</div>
-        </div>
-        <div class="class_containter"></div>
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Мероприятия</div>
+      </div>
+      <div class="class_containter"></div>
     </div>
 
     <div class="tabs noselect faster" id="kruzhki">
-        <div class="tab_title">
-            <button class="back_action">
-                <img src="/images/close.svg" alt="" class="back_btn noselect" />
-            </button>
-            <div>Кружки</div>
-        </div>
-        <div class="kruzhki_containter"></div>
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Кружки</div>
+      </div>
+      <div class="kruzhki_containter"></div>
     </div>
 
-    <div class="tabs noselect faster" id="play">
-        <div class="tab_title">
-            <button class="back_action">
-                <img src="/images/close.svg" alt="" class="back_btn noselect" />
-            </button>
-            <div>Игры</div>
-        </div>
-        <div class="class_containter" id="game_container">
-            <!-- <iframe src="/flappy/index.html" frameborder="0" style="width: 100%;"></iframe> -->
-        </div>
+    <!-- <div class="tabs noselect faster" id="play">
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Игры</div>
+      </div>
+      <div class="class_containter" id="game_container">
+      </div>
+    </div> -->
+    <div class="tabs noselect faster" id="zvonki">
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Режим работы</div>
+      </div>
+      <div class="class_containter" id="zvonki_container">
+        <img src="/images/rezhim/zvonki1.jpg" alt="" style="width: 100%" />
+        <img src="/images/rezhim/zvonki2.jpg" alt="" style="width: 100%" />
+        <img src="/images/rezhim/zvonki3.jpg" alt="" style="width: 100%" />
+      </div>
     </div>
-    <!--scripts -->
-    <!-- <script src="../particles.js"></script> -->
-    <!-- <script src="js/api.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/cons_parse.js"></script>
-    <script src="js/rasp_parse.js"></script> -->
+
     <script src="scripts/index.js"></script>
-
-</body>
-
+  </body>
 </html>
