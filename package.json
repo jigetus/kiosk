@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "test": "editorconfig-checker"
+    "test": "editorconfig-checker",
+    "deploy": "robocopy \"C:\\Users\\danilov-av\\Desktop\\kiosk\\dist\" \"C:\\kiosk.com\" /E"
   },
   "author": "Alexey Danilov",
   "license": "ISC",

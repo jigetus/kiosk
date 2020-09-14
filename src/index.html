@@ -5,11 +5,11 @@
     <title>Территория Гаммы 1502</title>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" media="screen" href="index.css" />
+    <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
-      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     />
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   </head>
 
   <body>
@@ -61,7 +61,27 @@
         <div>Консультации</div>
       </div>
       <div class="class_containter" id="cons_container">
-        <div class="cons_tab_containter"></div>
+        <div class="cons_tab_containter">
+          <div class="cons_tab" id="constab_1" onclick="Cons_tab(1)">
+            Русский язык
+          </div>
+          <div class="cons_tab" id="constab_2" onclick="Cons_tab(2)">
+            Математика
+          </div>
+          <div class="cons_tab" id="constab_3" onclick="Cons_tab(3)">
+            Физика
+          </div>
+          <div class="cons_tab" id="constab_4" onclick="Cons_tab(4)">
+            Биология, Химия, География, Обществознание
+          </div>
+          <div class="cons_tab" id="constab_5" onclick="Cons_tab(5)">
+            Английский язык
+          </div>
+          <div class="cons_tab" id="constab_6" onclick="Cons_tab(6)">
+            Информатика
+          </div>
+        </div>
+        <img src="images/cons/cons_math.png" />
       </div>
     </div>
 
@@ -102,7 +122,7 @@
         </button>
         <div>Режим работы</div>
       </div>
-      <div class="class_containter" id="zvonki_container">
+      <div class="class_containter scrollbar" id="zvonki_container">
         <img src="/images/rezhim/zvonki1.jpg" alt="" style="width: 100%" />
         <img src="/images/rezhim/zvonki2.jpg" alt="" style="width: 100%" />
         <img src="/images/rezhim/zvonki3.jpg" alt="" style="width: 100%" />

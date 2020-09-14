@@ -10,7 +10,6 @@ const router = new Router("particles-js");
 router.HideTab("rasp");
 router.HideTab("kruzhki");
 router.HideTab("events");
-// router.HideTab("play");
 router.HideTab("cons");
 router.HideTab("zvonki");
 
@@ -93,10 +92,6 @@ $(document).ready(function () {
 					element.price
 				);
 			});
-			//add scrollbars
-			new SimpleBar(document.querySelector(".kruzhki_containter"), {
-				autoHide: false,
-			});
 			SmartClick(".back_action", () => router.GoBack());
 		});
 });
@@ -119,5 +114,3 @@ function updateChat() {
 		return;
 	}
 }
-
-new SimpleBar(document.getElementById("zvonki_container"), { autoHide: false });

@@ -69,6 +69,23 @@ button {
 }
 #zvonki_container {
   height: 95%;
+  overflow: auto;
+}
+
+.scrollbar .scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: lightgrey;
 }
 
 #cons {
@@ -110,16 +127,13 @@ button {
   font-size: 42px;
   text-transform: uppercase;
   letter-spacing: 3.5px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
   background-color: rgba(255, 255, 255, 0.9);
-  /* outline: 1px solid grey; */
-  /* border-radius: 8px; */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   transition: transform 0.1s ease 0s;
   cursor: pointer;
-  /* outline: none; */
   margin-bottom: 40px;
 }
 
@@ -131,7 +145,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 72px;
   letter-spacing: 5px;
-  font-weight: 600;
+  font-weight: 500;
   height: 160px;
   line-height: 160px;
   margin-left: 55px;
@@ -221,7 +235,7 @@ button {
 .class_tab {
   font-family: "Roboto", sans-serif;
   font-size: 46px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   border: 1px solid grey;
   /* border-radius: 8px; */
@@ -336,7 +350,7 @@ button {
   border: 1px solid grey;
   padding: 15px;
   margin: 8px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 3px;
   box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -345,7 +359,7 @@ button {
   background-color: rgba(0, 0, 0, 0);
 }
 .cons_tab_active {
-  background: #e53935;
+  background: #ff5050;
   /* fallback for old browsers */
   /* background: -webkit-linear-gradient( to right, #e35d5b, #e53935); */
   /* Chrome 10-25, Safari 5.1-6 */
