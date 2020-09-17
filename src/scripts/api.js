@@ -18,12 +18,14 @@ class Router {
 		this.currentState = "menu";
 		this.prevState = null;
 		this.path = "/menu";
+		this.background.style.opacity == "100";
+		this.isBusy = false;
 	}
 
 	HideBackground() {
-		animateCSS(this.background.id, "fadeOut", () => {
-			this.background.style.opacity = "0";
-		});
+		// animateCSS(this.background.id, "fadeOut", () => {
+		// 	this.background.style.opacity = "0";
+		// });
 	}
 	ShowBackground() {
 		this.background.style.opacity = "100";
@@ -37,8 +39,13 @@ class Router {
 		const node = document.getElementById(tab_id);
 		node.style.display = "block";
 	}
+	isBackGroundShow() {
+		if (this.background.style.opacity !== "0") return true;
+		return false;
+	}
 	GetPrevState() {
-		const reg = new RegExp("(/[a-z]*)", "g");
+		// const reg = new RegExp("(/[a-z]*)", "g");
+		const reg = new RegExp("(/[a-z 0-9]*)", "g");
 		let rez = this.path.match(reg);
 		let back = rez[rez.length - 2];
 		const current = rez[rez.length - 1];
@@ -47,37 +54,51 @@ class Router {
 		this.prevState = back;
 	}
 	GoTo(tab_id) {
-		this.HideBackground();
-		this.path += "/" + tab_id;
-		animateCSS(this.currentState, "bounceOutLeft", () => {
-			this.HideTab(this.currentState);
-			this.ShowTab(tab_id);
-			animateCSS(tab_id, "bounceInRight", () => {
-				this.currentState = tab_id;
+		if (!this.isBusy) {
+			this.path += "/" + tab_id;
+			this.isBusy = true;
+			animateCSS(this.currentState, "bounceOutLeft", () => {
+				this.HideTab(this.currentState);
+				this.ShowTab(tab_id);
+				animateCSS(tab_id, "bounceInRight", () => {
+					this.currentState = tab_id;
+					this.isBusy = false;
+				});
 			});
-		});
+			console.log(this.path);
+		} else {
+			console.log("router is busy");
+		}
 	}
 	GoBack() {
-		this.GetPrevState();
-		if (this.prevState == "menu") {
-			this.ShowBackground();
-			animateCSS(this.currentState, "bounceOutRight", () => {
-				this.HideTab(this.currentState);
-				this.ShowTab(this.prevState);
-				animateCSS(this.prevState, "bounceInLeft", () => {
-					this.currentState = this.prevState;
-					this.prevState = null;
+		if (!this.isBusy) {
+			this.GetPrevState();
+			this.isBusy = true;
+			if (this.prevState == "menu") {
+				// this.ShowBackground();
+				animateCSS(this.currentState, "bounceOutRight", () => {
+					this.HideTab(this.currentState);
+					this.ShowTab(this.prevState);
+					animateCSS(this.prevState, "bounceInLeft", () => {
+						this.currentState = this.prevState;
+						this.prevState = null;
+						this.isBusy = false;
+					});
 				});
-			});
+			} else {
+				animateCSS(this.currentState, "bounceOutRight", () => {
+					this.HideTab(this.currentState);
+					this.ShowTab(this.prevState);
+					animateCSS(this.prevState, "bounceInLeft", () => {
+						this.currentState = this.prevState;
+						this.prevState = null;
+						this.isBusy = false;
+					});
+				});
+			}
+			console.log(this.path);
 		} else {
-			animateCSS(this.currentState, "bounceOutRight", () => {
-				this.HideTab(this.currentState);
-				this.ShowTab(this.prevState);
-				animateCSS(this.prevState, "bounceInLeft", () => {
-					this.currentState = this.prevState;
-					this.prevState = null;
-				});
-			});
+			console.log("router is busy");
 		}
 	}
 	GoToMenu() {
@@ -100,10 +121,17 @@ class Router {
 function SmartClick(targetSelector, action) {
 	$(targetSelector).click((ev) => {
 		ev.preventDefault();
-		action();
-		$(targetSelector).prop("disabled", true);
-		setTimeout(() => {
-			$(targetSelector).prop("disabled", false);
-		}, 1500);
+		if (!router.isBusy) {
+			action();
+		} else {
+			return false;
+		}
+		// action();
+		// $(targetSelector).prop("disabled", true);
+		// $(".back_action").prop("disabled", true);
+		// setTimeout(() => {
+		// 	$(targetSelector).prop("disabled", false);
+		// 	$(".back_action").prop("disabled", false);
+		// }, 1500);
 	});
 }
