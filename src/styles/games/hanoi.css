@@ -1,0 +1,121 @@
+#hanoi_container {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#hanoi_desc {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+#hanoi_game {
+  width: 900px;
+  height: 400px;
+  background: white;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: 2px dashed black; */
+  padding: 4px;
+  box-sizing: border-box;
+  position: relative;
+  /* margin-top: 610px; */
+}
+.tower {
+  width: 30%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(16, 16, 16, 0.5) 46%,
+    rgba(0, 0, 0, 0.5) 54%,
+    rgba(255, 255, 255, 0) 55%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0) 255%
+  );
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+}
+
+.circle {
+  height: 50px;
+  margin-top: 2px;
+  border-radius: 50px;
+  /* transition: all 1s cubic-bezier(0.23, 1, 0.32, 1); */
+  touch-action: none;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+#t1 {
+  width: 260px;
+  background-color: red;
+}
+#t2 {
+  width: 220px;
+  background-color: yellow;
+}
+#t3 {
+  width: 170px;
+  background-color: green;
+}
+#t4 {
+  width: 120px;
+  background-color: blue;
+}
+
+#t5 {
+  width: 60px;
+  background-color: rgb(236, 3, 225);
+}
+.info {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  left: 0;
+  top: -60px;
+}
+#error {
+  position: absolute;
+  color: red;
+  margin-left: 100px;
+  width: 200px;
+  left: 250px;
+  top: -50px;
+}
+#win {
+  position: absolute;
+  color: green;
+  margin-left: 100px;
+  width: 200px;
+  left: 230px;
+  top: -50px;
+  font-size: 70px;
+}
+#restart {
+  position: absolute;
+  top: 430px;
+  padding: 20px;
+  font-size: 40px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+}

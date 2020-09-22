@@ -14,7 +14,6 @@ fetch(
 )
 	.then((answ) => answ.json())
 	.then((res) => {
-		console.log(res);
 		res.forEach((element) => {
 			//Создание вкладки для каждого кружка
 			const newtab = document.createElement("div");
@@ -75,9 +74,7 @@ fetch(
 	});
 
 const goToKruzhok = (id) => {
-	console.log("kruzhok_clicked");
 	if (!router.isBusy) {
-		console.log("kruzhok_action");
 		router.GoTo(`kruzhok${id}`);
 	} else {
 		return false;

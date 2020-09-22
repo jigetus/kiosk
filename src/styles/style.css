@@ -58,7 +58,14 @@ button {
   box-sizing: border-box;
   padding: 20px;
 }
-
+#hanoi {
+  width: 90%;
+  height: 90%;
+  top: 40px;
+  left: 60px;
+  box-sizing: border-box;
+  padding: 20px;
+}
 #zvonki {
   width: 90%;
   height: 90%;
@@ -377,7 +384,6 @@ button {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
   transition: all 0.5 cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .card:active {
@@ -395,7 +401,7 @@ button {
 .card > h1 {
   margin: 0;
   padding: 0;
-  height: 80%;
+  /* height: 80%; */
   color: rgb(61, 61, 61);
   font-size: 33px;
   font-family: "Roboto", sans-serif;
@@ -405,6 +411,7 @@ button {
   text-align: center;
   box-sizing: border-box;
   word-wrap: wrap;
+  margin-top: 5px;
 }
 .card > span {
   font-size: 30px;
@@ -449,7 +456,7 @@ button {
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 38px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.9);
   width: 80%;
   align-self: center;
   margin: 0;

@@ -22,8 +22,8 @@
       <button class="button" id="goto_zvonki">Режим работы</button>
       <button class="button" id="goto_cons">Консультации</button>
       <button class="button" id="goto_kruzhki">Кружки</button>
-      <button class="button" id="goto_events">Мероприятия</button>
-      <!-- <button class="button" id="goto_play">Поиграть</button> -->
+      <!-- <button class="button" id="goto_events">Мероприятия</button> -->
+      <button class="button" id="goto_play">Развлечения</button>
     </div>
 
     <div class="tabs noselect faster" id="rasp">
@@ -153,8 +153,7 @@
         </button>
         <div>Игры</div>
       </div>
-      <div class="class_containter" id="game_container">
-      </div>
+      <div class="class_containter" id="game_container"></div>
     </div> -->
     <div class="tabs noselect faster" id="zvonki">
       <div class="tab_title">
@@ -167,6 +166,40 @@
         <img src="/images/rezhim/zvonki1.jpg" alt="" style="width: 100%" />
         <img src="/images/rezhim/zvonki2.jpg" alt="" style="width: 100%" />
         <img src="/images/rezhim/zvonki3.jpg" alt="" style="width: 100%" />
+      </div>
+    </div>
+    <div class="tabs noselect faster" id="hanoi">
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Развлечения</div>
+      </div>
+      <div class="class_containter scrollbar" id="hanoi_container">
+        <div id="hanoi_desc">
+          Необходимо перенести все диски с первой башни на центральную за
+          минимальное число ходов. За раз можно переносить только один диск.
+          Большой диск на маленький ставить запрещенно.
+        </div>
+        <div id="hanoi_game">
+          <div class="info" class="noselect">
+            Ходов: <span id="counts" class="noselect"></span>
+            <span id="error" style="display: none" class="noselect"
+              >Ход не по правилам!</span
+            >
+            <span id="win" style="display: none" class="noselect">Победа!</span>
+          </div>
+          <div id="tower1" class="tower">
+            <div class="circle" id="t5" draggable="true"></div>
+            <div class="circle" id="t4" draggable="true"></div>
+            <div class="circle" id="t3" draggable="true"></div>
+            <div class="circle" id="t2" draggable="true"></div>
+            <div class="circle" id="t1" draggable="true"></div>
+          </div>
+          <div id="tower2" class="tower"></div>
+          <div id="tower3" class="tower"></div>
+          <button id="restart" class="noselect">Начать сначала</button>
+        </div>
       </div>
     </div>
 
