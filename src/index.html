@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -168,7 +172,7 @@
         <img src="/images/rezhim/zvonki3.jpg" alt="" style="width: 100%" />
       </div>
     </div>
-    <div class="tabs noselect faster" id="hanoi">
+    <!-- <div class="tabs noselect faster" id="hanoi">
       <div class="tab_title">
         <button class="back_action">
           <img src="/images/close.svg" alt="" class="back_btn noselect" />
@@ -201,8 +205,38 @@
           <button id="restart" class="noselect">Начать сначала</button>
         </div>
       </div>
+    </div> -->
+    <div class="tabs noselect faster" id="krest">
+      <div class="tab_title">
+        <button class="back_action">
+          <img src="/images/close.svg" alt="" class="back_btn noselect" />
+        </button>
+        <div>Развлечения</div>
+      </div>
+      <div class="class_containter scrollbar" id="krest_container">
+        <div id="krest_desc">
+          <b>Крестики-нолики!</b></br>
+          Позови друга и сыграй с ним одну из самых известных в мире игр! Не забудь, крестики ходят первыми 😉
+        </div>
+        <div id="hanoi_game">
+          <div id="controls">
+            <button id="reset_btn">Начать сначала</button>
+          </div>
+          <div id="game_container">
+            <div id="message"></div>
+            <div id="0" class="cell"></div>
+            <div id="1" class="cell"></div>
+            <div id="2" class="cell"></div>
+            <div id="3" class="cell"></div>
+            <div id="4" class="cell"></div>
+            <div id="5" class="cell"></div>
+            <div id="6" class="cell"></div>
+            <div id="7" class="cell"></div>
+            <div id="8" class="cell"></div>
+          </div>
+        </div>
+      </div>
     </div>
-
     <script src="scripts/index.js"></script>
   </body>
 </html>

@@ -12,14 +12,15 @@ router.HideTab("kruzhki");
 router.HideTab("events");
 router.HideTab("cons");
 router.HideTab("zvonki");
-router.HideTab("hanoi");
+// router.HideTab("hanoi");
+router.HideTab("krest");
 SmartClick("#goto_rasp", () => router.GoTo("rasp"));
 SmartClick("#goto_kruzhki", () => router.GoTo("kruzhki"));
 // SmartClick("#goto_events", () => router.GoTo("events"));
 // SmartClick("#goto_play", () => router.GoTo("play"));
 SmartClick("#goto_cons", () => router.GoTo("cons"));
 SmartClick("#goto_zvonki", () => router.GoTo("zvonki"));
-SmartClick("#goto_play", () => router.GoTo("hanoi"));
+SmartClick("#goto_play", () => router.GoTo("krest"));
 
 // Расписание таб
 function Rasp_tab(id) {

@@ -66,6 +66,14 @@ button {
   box-sizing: border-box;
   padding: 20px;
 }
+#krest {
+  width: 90%;
+  height: 90%;
+  top: 40px;
+  left: 60px;
+  box-sizing: border-box;
+  padding: 20px;
+}
 #zvonki {
   width: 90%;
   height: 90%;
@@ -197,7 +205,6 @@ button {
   padding: 8px 15px 8px 15px;
   margin: 10px 5px;
   width: 160px;
-  height: 50px;
   text-align: center;
   transition: all 0.1s ease 0s;
   line-height: 50px;
