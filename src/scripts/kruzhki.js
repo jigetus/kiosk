@@ -14,6 +14,18 @@ fetch(
 )
 	.then((answ) => answ.json())
 	.then((res) => {
+		console.log(res);
+		res.sort((a, b) => {
+			if (parseInt(a.CLASS) > parseInt(b.CLASS)) {
+				return 1;
+			}
+			if (parseInt(a.CLASS) < parseInt(b.CLASS)) {
+				return -1;
+			}
+			// a должно быть равным b
+			return 0;
+		});
+		console.log(res);
 		res.forEach((element) => {
 			//Создание вкладки для каждого кружка
 			const newtab = document.createElement("div");
